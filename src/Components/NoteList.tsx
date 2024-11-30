@@ -152,7 +152,13 @@ function EditTagsModal({
             close
           </button>
         </div>
-        <div className="flex flex-col gap-2">
+        <div
+          className="flex flex-col gap-2  max-h-[350px] overflow-y-scroll"
+          style={{
+            scrollbarWidth: "thin", // For Firefox
+            scrollbarColor: "rgba(107, 114, 128, 0.5) transparent",
+          }}
+        >
           {availableTags.map((tag, i) => (
             <div key={i} className="flex gap-2">
               <input
